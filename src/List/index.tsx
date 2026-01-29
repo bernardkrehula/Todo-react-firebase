@@ -1,6 +1,6 @@
 import "./index.css";
-import Input from "./Input";
-import Task from "./Task";
+import Input from "../components/input";
+import Task from "./task";
 
 const List = () => {
   return (
