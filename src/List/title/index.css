@@ -1,0 +1,23 @@
+.title{
+    display: flex;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.title h1{
+    font-size: 3rem;
+    margin-right: 5px;
+}
+.title svg{
+    transform: rotate(180deg);
+    width: 40px;
+    height: 40px;
+}
+.notebook-svg{
+    fill: rgb(230, 125, 33);
+}
+.pencil-svg{
+    margin-left: -15px;
+}

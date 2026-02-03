@@ -2,14 +2,15 @@ import "./index.css";
 
 const Task = () => {
   return (
-    <div className="task">
+    <li className="task">
+      
       <div>
         <span>created_at</span>
       </div>
       <div>
         <span>title</span>
       </div>
-    </div>
+    </li>
   );
 };
 export default Task;

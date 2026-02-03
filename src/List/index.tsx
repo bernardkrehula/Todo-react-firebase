@@ -1,14 +1,16 @@
+import TaskCreator from "../components/TaskCreator";
 import "./index.css";
-import Input from "../components/input";
 import Task from "./task";
+import Title from "./title";
 
 const List = () => {
   return (
-    <div className="list">
-      <Input />
+    <ul className="list">
+      <Title />
+      <TaskCreator />
       <Task />
       <Task />
-    </div>
+    </ul>
   );
 };
 export default List;

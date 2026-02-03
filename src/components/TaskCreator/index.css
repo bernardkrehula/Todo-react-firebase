@@ -1,0 +1,8 @@
+.task-creator{
+    display: flex;
+    position: relative;
+}
+.task-creator button{
+    position: absolute;
+    right: 0;
+}

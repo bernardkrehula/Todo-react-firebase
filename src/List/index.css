@@ -1,3 +1,6 @@
+html{
+  font-size: 62.5%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -7,10 +10,14 @@ body {
   background-color: rgb(120, 193, 242);
 }
 .list {
+  flex-direction: column;
   background-color: white;
   box-shadow: 0 0 30px 2px rgb(0, 0, 0, 0.2);
-  width: 600px;
+  width: 500px;
   height: 500px;
   margin: 100px auto;
   border-radius: 10px;
+  padding-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
