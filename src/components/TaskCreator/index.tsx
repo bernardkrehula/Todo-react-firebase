@@ -10,11 +10,12 @@ const TaskCreator = () => {
         const value = e.target.value;
         setInputValue(value);
     }
-    
+    const clearInput = () => setInputValue("");
+
     return(
         <div className='task-creator'>
             <Input placeholder="Add your task" onChange={changeInptuValue} value={inputValue}/>
-            <Btn type='button' variation="primary">+</Btn>
+            <Btn type='button' variation="primary" onClick={clearInput}>+</Btn>
         </div>
     )
 }
