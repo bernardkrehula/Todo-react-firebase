@@ -2,7 +2,7 @@ import "./index.css";
 
 type InputType = {
   type?: string;
-  inputValue?: string;
+  value?: string;
   placeholder?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
@@ -10,7 +10,7 @@ type InputType = {
 
 const Input = ({
   type = "text",
-  inputValue = "",
+  value = "",
   placeholder = "Enter task",
   onChange = () => {},
   className = "",
@@ -19,7 +19,7 @@ const Input = ({
     <input
       className={className}
       type={type}
-      value={inputValue}
+      value={value}
       placeholder={placeholder}
       onChange={onChange}
     />
