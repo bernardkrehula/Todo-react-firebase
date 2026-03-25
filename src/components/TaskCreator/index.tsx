@@ -2,8 +2,7 @@ import "./index.css";
 import Input from "../../ui/input";
 import Btn from "../../ui/btn";
 import { useState } from "react";
-import { getDatabase, push, ref, set } from "firebase/database";
-import app from "../../config";
+import { requestTaskUpload } from "../../api/requestTaskUpload";
 
 const TaskCreator = () => {
   const [inputValue, setInputValue] = useState<string>("");
@@ -13,17 +12,8 @@ const TaskCreator = () => {
     setInputValue(value);
   };
   const saveTask = () => {
-    try {
-      const db = getDatabase(app);
-      const newDocRef = push(ref(db, "tasks"));
-      set(newDocRef, {
-        taskName: inputValue,
-      });
-      clearInput();
-      return console.log("data saved succesfully");
-    } catch (error) {
-      throw Error;
-    }
+    requestTaskUpload(inputValue);
+    clearInput();
   };
   const clearInput = () => setInputValue("");
 

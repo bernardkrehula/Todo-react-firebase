@@ -2,10 +2,11 @@ import "./index.css";
 import { FaRegTrashAlt } from "react-icons/fa";
 import { RiPencilFill } from "react-icons/ri";
 
-const Task = () => {
+const Task = ({taskName}: {taskName: string}) => {
+  console.log(taskName)
   return (
     <li className="task">
-      <span>Nesto</span>
+      <span>{taskName}</span>
       <div className="task-svg">
         <RiPencilFill className="task-pencil"/>
         <FaRegTrashAlt />
