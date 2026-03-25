@@ -5,7 +5,7 @@ export const requestTaskUpload = (inputValue: string) => {
     const message = "data saved succesfully";
     try {
       const db = getDatabase(app);
-      const newDocRef = push(ref(db, "tasks"));
+      const newDocRef = push(ref(db, "tasks"), limitToFirst(7));
       set(newDocRef, {
         taskName: inputValue,
       });
