@@ -5,7 +5,6 @@ import { useState } from "react";
 const List = () => {
   const [toDoList, setToDoList] = useState([]);
 
-  
 
   return (
     <div className="list">
