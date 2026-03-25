@@ -1,15 +1,15 @@
 import "./index.css";
 import Task from "../components/task";
-import { useState } from "react";
+import { useTasks } from "../hooks/useTasks";
 
 const List = () => {
-  const [toDoList, setToDoList] = useState([]);
+  const { tasks } = useTasks();
 
-
+  if (!tasks) return null;
   return (
     <div className="list">
-      {toDoList.map((task, index) => {
-        return <Task key={index} {...task}/>
+      {tasks.map((task, index) => {
+        return <Task key={index} {...task} />;
       })}
     </div>
   );
