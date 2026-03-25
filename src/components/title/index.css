@@ -5,6 +5,7 @@
     width: fit-content;
     margin: 0 auto;
     margin-bottom: 20px;
+    font-family: Outfit, sans-serif;
 }
 .title h1{
     font-size: 3rem;
@@ -19,5 +20,5 @@
     fill: rgb(230, 125, 33);
 }
 .pencil-svg{
-    margin-left: -15px;
+    margin-left: -14px;
 }

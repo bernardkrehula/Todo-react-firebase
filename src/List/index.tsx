@@ -1,5 +1,5 @@
 import "./index.css";
-import Task from "./task";
+import Task from "../components/task";
 
 const List = () => {
   return (

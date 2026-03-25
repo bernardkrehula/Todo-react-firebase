@@ -1,7 +1,7 @@
 import './App.css';
 import TaskCreator from './components/TaskCreator';
 import List from './List';
-import Title from './List/title';
+import Title from './components/title';
 
 const App = () => {
     return(

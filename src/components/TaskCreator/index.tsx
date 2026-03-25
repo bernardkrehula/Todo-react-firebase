@@ -1,6 +1,6 @@
 import './index.css';
-import Input from '../input';
-import Btn from '../btn';
+import Input from '../../ui/input';
+import Btn from '../../ui/btn';
 import { useState } from 'react';
 
 const TaskCreator = () => {
