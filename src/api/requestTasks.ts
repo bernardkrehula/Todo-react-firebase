@@ -6,7 +6,11 @@ export const requestTasks = async () => {
     const db = getDatabase(app);
     const dbRef = ref(db, "tasks");
     const snapshot = await get(dbRef);
-    return Object.values(snapshot.val());
+    if(!snapshot.exists()) return []
+    return Object.entries(snapshot.val()).map(([id, value]) => ({
+      id,
+      ...(value as { taskName: string }),
+    }));
   } catch (error) {
     throw Error;
   }
