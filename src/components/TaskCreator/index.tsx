@@ -1,34 +1,37 @@
 import "./index.css";
 import Input from "../../ui/input";
 import Btn from "../../ui/btn";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useTasks } from "../../hooks/useTasks";
 
 const TaskCreator = () => {
   const [inputValue, setInputValue] = useState<string>("");
-  const {makeTask} = useTasks();
+  const { makeTask } = useTasks();
 
   const changeInptuValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setInputValue(value);
   };
-  const saveTask = () => {
-    makeTask(inputValue);
-    clearInput();
+  const saveTask = (e: React.ChangeEvent) => {
+    e.preventDefault();
+    if (inputValue != "") {
+      makeTask(inputValue);
+      clearInput();
+    }
   };
   const clearInput = () => setInputValue("");
 
   return (
-    <div className="task-creator">
+    <form className="task-creator" onSubmit={saveTask}>
       <Input
         placeholder="Add your task"
         onChange={changeInptuValue}
         value={inputValue}
       />
-      <Btn type="button" variation="primary" onClick={saveTask}>
+      <Btn type="submit" variation="primary">
         +
       </Btn>
-    </div>
+    </form>
   );
 };
 export default TaskCreator;
